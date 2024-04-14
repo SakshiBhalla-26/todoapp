@@ -1,0 +1,85 @@
+/* Base styles */
+body {
+  background-color:black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#heading{
+  text-align: center; /* Center the h1 element */
+  color: white; /* Set the color to white */
+  margin: 50px 0; /* Add margin for spacing */
+  font-size:70px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: black;
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 90%; /* Use percentage for responsiveness */
+  max-width: 500px; /* Limit the max width */
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Use transform for centering */
+}
+
+#tasklist {
+  margin: 20px 0;
+  background-color: black;
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height dynamically */
+  text-align: center;
+}
+
+#name {
+  width: 100%; /* Full width */
+  height: 30px;
+  border-radius: 15px;
+  font-size: 1rem; /* Use rem for responsive font size */
+}
+
+/* Task list item styles */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Add margins to the left and right */
+  height: 50px;
+  font-size: 1.5rem;
+  color: white;
+  border-bottom: 1px solid grey;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+  /* Styles for tablets and larger devices */
+  #main {
+    width: 70%; /* Adjust width */
+  }
+  
+  
+}
+
+@media (max-width: 768px) {
+  #heading {
+      font-size: 50px; /* Font size for screens smaller than 768px */
+  }
+}
+
+@media (max-width: 480px) {
+  #heading {
+      font-size: 30px; /* Font size for screens smaller than 480px */
+  }
+}
+
+@media (min-width: 900px) {
+  /* Styles for larger screens */
+  #main {
+    width: 50%; /* Adjust width */
+  }
+}

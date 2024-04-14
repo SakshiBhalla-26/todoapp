@@ -26,9 +26,18 @@ function addToLocal(){
 function addToTaskList(tobj){
   let taskdiv=document.createElement("div");
   taskdiv.setAttribute("id",tobj.tid);
+  taskdiv.classList.add("task-item");
   taskdiv.style.fontSize="23px";
+  taskdiv.style.color="white";
+  taskdiv.style.display = "flex";
+  taskdiv.style.height = "50px";
+  taskdiv.style.borderBottom = "1px solid grey";
+  taskdiv.style.justifyContent = "center";
+  taskdiv.style.alignItems = "center";
+  
   let ntask=document.createElement("span");
   ntask.innerHTML=tobj.name;
+  ntask.style.flexGrow = 2;
   let checkbox=document.createElement("input");
   checkbox.setAttribute("type","checkbox");
   checkbox.addEventListener("click",function(event){
@@ -41,7 +50,7 @@ function addToTaskList(tobj){
     }
   })
   let deleteimg=document.createElement("img");
-  deleteimg.setAttribute("src","delete.png");
+  deleteimg.setAttribute("src","delete1.png");
   deleteimg.setAttribute("width","20px");
   deleteimg.setAttribute("height","20px");
   
@@ -59,8 +68,9 @@ function addToTaskList(tobj){
     updateName(tobj.tid,etask);
   })
 
-  taskdiv.appendChild(ntask);
+  
   taskdiv.appendChild(checkbox);
+  taskdiv.appendChild(ntask);
   taskdiv.appendChild(deleteimg);
   taskdiv.appendChild(editimg);
   leftside.appendChild(taskdiv);
